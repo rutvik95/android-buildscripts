@@ -65,10 +65,10 @@ cp -r ~/patch/msim/msim_frameworks_opt_telephony-msim.patch ~/axxion/frameworks/
 cp -r ~/patch/msim/msim_packages_apps_Setting.diff ~/axxion/packages/apps/Settings
 cp -r ~/patch/msim/msim_packages_services_Telephony.diff ~/axxion/packages/services/Telephony
 . msim-patches.sh
-
     
 else
     echo "MSIM NOT SUPPORTED."
+    read -p " PRESS ENTER TO START THE BUILD"
 . build/envsetup.sh && brunch i9082 
 fi
 
