@@ -52,5 +52,26 @@ echo -e " ALL PATCHES APPLIED SUCCESSFULLY AND NOW BUILD STARTING "
 echo -e ""
 cd ../../
 
+#checking if msim exists
+
+if [ -d "frameworks/opt/telephony-msim" ]
+then
+    echo "msim supported ."
+   
+#now copying msim patches ... change the path axxion to any other rom you are compiling
+
+cp -r ~/patch/msim/msim_frameworks_base.diff ~/axxion/frameworks/base
+cp -r ~/patch/msim/msim_frameworks_opt_telephony-msim.patch ~/axxion/frameworks/opt/telephony-msim
+cp -r ~/patch/msim/msim_packages_apps_Setting.diff ~/axxion/packages/apps/Settings
+cp -r ~/patch/msim/msim_packages_services_Telephony.diff ~/axxion/packages/services/Telephony
 . msim-patches.sh
+
+    
+else
+    echo "MSIM NOT SUPPORTED."
+. build/envsetup.sh && brunch i9082 
+fi
+
+
+
  

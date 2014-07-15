@@ -50,4 +50,4 @@ echo -e ""
 echo -e " all msim patches applied ..pl review fr any errors "
 read -p " PRESS ENTER TO START BUILDING "
 
-. build/envsetup.sh && lunch vanir_i9082-userdebug && make otapackage -j4 
+. build/envsetup.sh && brunch i9082 -j4
