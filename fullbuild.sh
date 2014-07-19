@@ -1,15 +1,15 @@
 #this script copies the patches from the patch folder to the rom folder 
 
-# just replace the ~/patch to ur folder name where the patches exist and change ~/axxion to the path of the rom 
+# just replace the ~/patch to ur folder name where the patches exist and change ~/cm11 to the path of the rom 
 
 
 
 #these copy normal patches reqd to boot the device and core functions to work
-cp -r ~/patch/audiovideo.diff ~/axxion/frameworks/av
-cp -r ~/patch/bluetooth.diff ~/axxion/hardware/broadcom/libbt
-cp -r ~/patch/hwc.diff ~/axxion/frameworks/native
-cp -r ~/patch/webview.diff ~/axxion/external/chromium_org
-cp -r ~/patch/ril.diff ~/axxion/system/core
+cp -r ~/patch/audiovideo.diff ~/cm11/frameworks/av
+cp -r ~/patch/bluetooth.diff ~/cm11/hardware/broadcom/libbt
+cp -r ~/patch/hwc.diff ~/cm11/frameworks/native
+cp -r ~/patch/webview.diff ~/cm11/external/chromium_org
+cp -r ~/patch/ril.diff ~/cm11/system/core
 
 
 
@@ -76,12 +76,18 @@ if [ -d "frameworks/opt/telephony-msim" ]
 then
     echo "MSIM SUPPORTED ."
    
-#now copying msim patches ... change the path axxion to any other rom you are compiling
+#now copying msim patches ... change the path cm11 to any other rom you are compiling
 
-cp -r ~/patch/msim/msim_frameworks_base.diff ~/axxion/frameworks/base
-cp -r ~/patch/msim/msim_frameworks_opt_telephony-msim.patch ~/axxion/frameworks/opt/telephony-msim
-cp -r ~/patch/msim/msim_packages_apps_Setting.diff ~/axxion/packages/apps/Settings
-cp -r ~/patch/msim/msim_packages_services_Telephony.diff ~/axxion/packages/services/Telephony
+cp -r ~/patch/msim/msim_frameworks_base.diff ~/cm11/frameworks/base
+cp -r ~/patch/msim/msim_frameworks_opt_telephony-msim.patch ~/cm11/frameworks/opt/telephony-msim
+cp -r ~/patch/msim/msim_packages_apps_Setting.diff ~/cm11/packages/apps/Settings
+cp -r ~/patch/msim/msim_packages_services_Telephony.diff ~/cm11/packages/services/Telephony
+
+echo -e ""
+echo -e "MSIM PATCHES COPIED ! PLEASE REVIEW FOR ANY ERRORS"
+read -p "PRESS ENTER TO APPLY PATCHES"
+
+
 #frameworks/base patch 
 echo -e " PATCHING FRAMEWORKS/BASE "
 echo -e ""
