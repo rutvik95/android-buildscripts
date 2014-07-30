@@ -1,5 +1,5 @@
 
-#bin/sh
+#! /bin/sh
 #this script copies the patches from the patch folder to the rom folder 
 # just replace the ~/patch to ur folder name where the patches exist and change ~/cm11 to the path of the rom 
 
