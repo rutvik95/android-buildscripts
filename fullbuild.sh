@@ -96,7 +96,7 @@ echo -e ""
 cd frameworks/base 
 git checkout .
 patch -p1 < msim_frameworks_base.diff
-rm -rf /res/layout/status_bar_expanded.xml.orig
+rm -rf res/layout/status_bar_expanded.xml.orig
 
 echo -e " frameworks/base patched successfully "
 echo -e ""
