@@ -1,5 +1,8 @@
 #!/bin/bash
-echo -e " WELCOME TO RUTVIKRVR'S BUILD SCRIPT FOR GALAXY GRAND DUOS "
+echo -e "\e[91m****************************************************************"
+echo -e "* WELCOME TO RUTVIKRVR'S BUILD SCRIPT FOR GALAXY GRAND DUOS    *"
+echo -e "****************************************************************"
+
 
 OPTIONS="Axxionkat 
 VanirAOSP
