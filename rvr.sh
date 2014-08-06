@@ -462,13 +462,14 @@ fi
    	echo -e "*******************************"
 
 
-	cd aogp
+cd aogp
+	repo sync -j100
 #these copy normal patches reqd to boot the device and core functions to work
-	cp -r ~/patch/audiovideo.diff ~/axxion/frameworks/av
-	cp -r ~/patch/bluetooth.diff ~/axxion/hardware/broadcom/libbt
-	cp -r ~/patch/hwc.diff ~/axxion/frameworks/native
-	cp -r ~/patch/webview.diff ~/axxion/external/chromium_org
-	cp -r ~/patch/ril.diff ~/axxion/system/core
+	cp -r ~/patch/audiovideo.diff ~/aogp/frameworks/av
+	cp -r ~/patch/bluetooth.diff ~/aogp/hardware/broadcom/libbt
+	cp -r ~/patch/hwc.diff ~/aogp/frameworks/native
+	cp -r ~/patch/webview.diff ~/aogp/external/chromium_org
+	cp -r ~/patch/ril.diff ~/aogp/system/core
 
 
 
@@ -536,10 +537,10 @@ fi
    
 	#now copying msim patches ... change the path axxion to any other rom you are compiling
 
-	cp -r ~/patch/msim/msim_frameworks_base.diff ~/axxion/frameworks/base
-	cp -r ~/patch/msim/msim_frameworks_opt_telephony-msim.patch ~/axxion/frameworks/opt/telephony-msim
-	cp -r ~/patch/msim/msim_packages_apps_Setting.diff ~/axxion/packages/apps/Settings
-	cp -r ~/patch/msim/msim_packages_services_Telephony.diff ~/axxion/packages/services/Telephony
+	cp -r ~/patch/msim/msim_frameworks_base.diff ~/aogp/frameworks/base
+	cp -r ~/patch/msim/msim_frameworks_opt_telephony-msim.patch ~/aogp/frameworks/opt/telephony-msim
+	cp -r ~/patch/msim/msim_packages_apps_Setting.diff ~/aogp/packages/apps/Settings
+	cp -r ~/patch/msim/msim_packages_services_Telephony.diff ~/aogp/packages/services/Telephony
 	
 	echo -e ""
 	echo -e "MSIM PATCHES COPIED ! PLEASE REVIEW FOR ANY ERRORS"
@@ -559,20 +560,20 @@ fi
 	echo -e ""
 	
 	# applying frameworks/opt/telephony-msim patch 
-	echo -e " applying  telephony-msim patch"
-	echo -e ""
-	cd ../opt/telephony-msim
-	git checkout .
-	patch -p1 < msim_frameworks_opt_telephony-msim.patch
+	#echo -e " applying  telephony-msim patch"
+	#echo -e ""
+	#cd ../opt/telephony-msim
+	#git checkout .
+	#patch -p1 < msim_frameworks_opt_telephony-msim.patch
 
-	echo -e " telephony-msim patched successfully"
-	echo -e ""
+	#echo -e " telephony-msim patched successfully"
+	#echo -e ""
 
 	# applying settings patch 
 	
 	echo -e " applying settings patch "
 	echo -e ""
-	cd ../../../
+	cd ../../
 	cd packages/apps/Settings
 	git checkout .
 	patch -p1 < msim_packages_apps_Setting.diff
@@ -580,7 +581,7 @@ fi
 	echo -e " settings patch applied successfully"
 	echo -e ""
 
-	# applying services/telephony patch 
+      # applying services/telephony patch 
 	echo -e ""
 	echo -e " applying telephony patch "
 	echo -e ""
@@ -604,8 +605,6 @@ fi
 	. build/envsetup.sh && brunch i9082
  
 	fi
-
-
 
 
     else
