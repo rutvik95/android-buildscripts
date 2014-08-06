@@ -158,12 +158,12 @@ do
 	read -p " PRESS ENTER TO START BUILDING "
 	
 	. build/envsetup.sh && brunch i9082 -j4
-    
+    	cd
 	else
 	    echo "MSIM NOT SUPPORTED."
 	    read -p " PRESS ENTER TO START THE BUILD"
 	. build/envsetup.sh && brunch i9082
- 
+ 	cd
 	fi
 #Axxion Build ends 
 
@@ -310,12 +310,12 @@ do
 	read -p " PRESS ENTER TO START BUILDING "
 	
 	. build/envsetup.sh && lunch vanir_i9082-userdebug && make otapackage -j4
-	    
+	   cd 
 	else
 	    echo "MSIM NOT SUPPORTED."
 	    read -p " PRESS ENTER TO START THE BUILD"
 	. build/envsetup.sh && lunch vanir_i9082-userdebug && make otapackage -j4
-	 
+	 cd
 	fi
 
 
@@ -446,12 +446,12 @@ do
 	read -p " PRESS ENTER TO START BUILDING "
 
 	. build/envsetup.sh && brunch i9082 
-    
+    	cd
 	else
  	   echo "MSIM NOT SUPPORTED."
  	   read -p " PRESS ENTER TO START THE BUILD"
 	. build/envsetup.sh && brunch i9082
- 
+ 	cd
 fi
 
 
@@ -598,12 +598,12 @@ cd aogp
 	read -p " PRESS ENTER TO START BUILDING "
 	
 	. build/envsetup.sh && brunch i9082 -j4
-    
+    	cd
 	else
 	    echo "MSIM NOT SUPPORTED."
 	    read -p " PRESS ENTER TO START THE BUILD"
 	. build/envsetup.sh && brunch i9082
- 
+ 	cd
 	fi
 
 
