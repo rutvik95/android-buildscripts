@@ -94,6 +94,7 @@ do
 
 	
 	. build/envsetup.sh && brunch i9082
+	cd
  
 #AICP BUILD ENDS
 elif [ "$opt" = "Revolt" ]; then
@@ -173,6 +174,7 @@ elif [ "$opt" = "Revolt" ]; then
 
 	    read -p " PRESS ENTER TO START THE BUILD"
 	. build/envsetup.sh && brunch i9082 -j4
+	cd
 #REVOLT BUILD ENDS
 
 
@@ -319,13 +321,15 @@ cd aogp
 	read -p " PRESS ENTER TO START BUILDING "
 	
 	. build/envsetup.sh && brunch i9082 -j4
-    
+    	cd
 	else
 	    echo "MSIM NOT SUPPORTED."
 	    read -p " PRESS ENTER TO START THE BUILD"
 	. build/envsetup.sh && brunch i9082
+	cd
  
 	fi
+	
 
 #AOGP BUILD ENDS
 elif [ "$opt" = "Nameless" ]; then
@@ -472,12 +476,12 @@ elif [ "$opt" = "Nameless" ]; then
 	read -p " PRESS ENTER TO START BUILDING "
 	
 	. build/envsetup.sh && brunch i9082 -j4
-    
+    	cd
 	else
 	    echo "MSIM NOT SUPPORTED."
 	    read -p " PRESS ENTER TO START THE BUILD"
 	. build/envsetup.sh && brunch i9082
- 
+ 	cd
 	fi
  else
      clear
