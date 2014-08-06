@@ -2,7 +2,7 @@
 echo -e "\e[91m****************************************************************"
 echo -e "* WELCOME TO RUTVIKRVR'S BUILD SCRIPT FOR GALAXY GRAND DUOS    *"
 echo -e "****************************************************************"
-
+#This build script has to be kept in the home folder along with the patch folder .. it will automatically navigate and apply patches and build
 
 OPTIONS="Axxionkat 
 VanirAOSP
