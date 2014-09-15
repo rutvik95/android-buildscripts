@@ -200,19 +200,7 @@ index c968593..81c21f3 100644
  
          setProperties();
      }
-diff --git a/frameworks/src/com/codeaurora/telephony/msim/MSimUiccController.java b/frameworks/src/com/codeaurora/telephony/msim/MSimUiccController.java
-index 8c163ae..fba03fe 100644
---- a/frameworks/src/com/codeaurora/telephony/msim/MSimUiccController.java
-+++ b/frameworks/src/com/codeaurora/telephony/msim/MSimUiccController.java
-@@ -157,7 +157,7 @@ public class MSimUiccController extends UiccController {
-             Integer index = new Integer(i);
-             mCis[i].registerForIccStatusChanged(this, EVENT_ICC_STATUS_CHANGED, index);
-             // TODO remove this once modem correctly notifies the unsols
--            mCis[i].registerForAvailable(this, EVENT_ICC_STATUS_CHANGED, index);
-+            mCis[i].registerForOn(this, EVENT_ICC_STATUS_CHANGED, index);
-             mCis[i].registerForNotAvailable(this, EVENT_RADIO_UNAVAILABLE, index);
-         }
-     }
+
 diff --git a/frameworks/src/com/codeaurora/telephony/msim/SubscriptionManager.java b/frameworks/src/com/codeaurora/telephony/msim/SubscriptionManager.java
 index 9ccc2a2..0ee18ac 100644
 --- a/frameworks/src/com/codeaurora/telephony/msim/SubscriptionManager.java

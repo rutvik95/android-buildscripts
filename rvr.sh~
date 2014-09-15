@@ -558,7 +558,7 @@ cd aogp
 	cp -r ~/patch/msim/msim_frameworks_base.diff ~/aogp/frameworks/base
 	cp -r ~/patch/msim/msim_frameworks_opt_telephony-msim.patch ~/aogp/frameworks/opt/telephony-msim
 	cp -r ~/patch/msim/msim_packages_apps_Setting.diff ~/aogp/packages/apps/Settings
-	cp -r ~/patch/msim/msim_frameworks_opt_telephony.patch ~/aogp/frameworks/opt/telephony
+	cp -r ~/patch/msim/msim_packages_services_Telephony.diff ~/aogp/packages/services/Telephony
 	
 	echo -e ""
 	echo -e "MSIM PATCHES COPIED ! PLEASE REVIEW FOR ANY ERRORS"

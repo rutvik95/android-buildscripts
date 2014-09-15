@@ -103,7 +103,6 @@ cp -r ~/patch/msim/msim_frameworks_base.diff ~/cm11/frameworks/base
 cp -r ~/patch/msim/msim_frameworks_opt_telephony-msim.patch ~/cm11/frameworks/opt/telephony-msim
 cp -r ~/patch/msim/msim_packages_apps_Setting.diff ~/cm11/packages/apps/Settings
 cp -r ~/patch/msim/msim_packages_services_Telephony.diff ~/cm11/packages/services/Telephony
-cp -r ~/patch/msim/msim_frameworks_opt_telephony.patch ~/cm11/frameworks/opt/telephony
 
 echo -e ""
 echo -e "MSIM PATCHES COPIED ! PLEASE REVIEW FOR ANY ERRORS"
